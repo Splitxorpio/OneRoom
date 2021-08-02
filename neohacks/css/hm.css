@@ -1,0 +1,54 @@
+@keyframes words {
+  0% {content: "C ";}
+  17% {content: "Co ";}
+  34% {content: "Com ";}
+  50% {content: "Comf ";}
+  67% {content: "Comfo ";}
+  84% {content: "Comfor ";}
+  100% {content: "Comfort ";}
+}
+@keyframes changeLetter {
+  0% {content: "";}
+  5% {content: "Z";}
+  10% {content: "Zo";}
+  15% {content: "Zon";}
+  20% {content: "Zone";}
+  25% {content: "Zon";}
+  30% {content: "Zo";}
+  35% {content: "Z";}
+  40% {content: "";}
+  54% {content: "S";}      
+  55% {content: "Sp";}
+  60% {content: "Spa";}
+  65% {content: "Spac";}
+  70% {content: "Space";}
+  75% {content: "Space";}
+  80% {content: "Space";}
+  85% {content: "Space";}
+  90% {content: "Space";}
+  95% {content: "Space";}
+  100% {content: "Space";}
+}
+@keyframes cursor {
+  0% {content: "";}
+  50% {content: "|";}
+  100% {content: "";}
+}
+.words::before {
+  animation: words 1s linear 0s 1 normal forwards;
+  content: "";
+}
+.letter-changer::before {
+  animation: changeLetter 3s linear 1s 1 normal forwards;
+  content: "";
+}
+.letter-changer::after {
+  animation: cursor 0.6s linear 2.2s 1 normal forwards, cursor 0.6s linear 4s 3 normal forwards;
+  content: "|";
+}
+.accessibility {
+  width: 0; 
+  display: inline-block; 
+  overflow: hidden; 
+  white-space:nowrap;
+}
